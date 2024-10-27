@@ -1,0 +1,48 @@
+Ejemplo básico del uso de componentes, props (Todo hecho en clase)  y FlatLists (No lo hemos visto todavía).
+
+1. Fijaros como se usan los props. Creo un componente Hola:
+
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
+const Hola = (props) => {
+    return (
+        <View>
+            <Text>{props.saludo}</Text>
+        </View>
+    )
+}
+
+export default Hola
+
+const styles = StyleSheet.create({})
+
+2. Desde el programa principal usaría ese componente:
+
+<Hola saludo="ESto es un saludo." />
+
+3. El componente Hola lo puedo reescribir como:
+
+const Hola = (props) => {
+    const {saludo} = props
+    return (
+        <View>
+            <Text>{saludo}</Text>
+        </View>
+    )
+}
+
+4. También podría escribirlo como:
+
+const Hola = ({saludo) => {
+    return (
+        <View>
+            <Text>{saludo}</Text>
+        </View>
+    )
+}
+
+5. Examina todos los ejemplos de HomeScreen.js
+6. Prueba el uso de FlatLists.
+
+
