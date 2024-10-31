@@ -1,0 +1,6 @@
+Este ejemplo modifica la aplicación para poder enviar un objeto "Coche" a la RestAPI a través de un método POST.
+
+1. Dentro de "pruebas", escribe "npm install" para descargar todos los módulos y fíjate que hay uno llamado "body-parser" (En moodle hay un enlace explicando su uso).
+2. Dentro de la aplicación ya hay disponible un botón que envía el objeto vacio, podrías probar a crear una nueva pantalla que tenga todos los campos y un botón enviar en ella.
+
+
