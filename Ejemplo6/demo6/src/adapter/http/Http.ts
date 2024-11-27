@@ -7,17 +7,17 @@ interface Config {
 }
 
 export interface IFilms {
-    getFilms(route : string) : Promise<MoviesResponse | HttpError>;
+    getFilms(route : string, page:number) : Promise<MoviesResponse | HttpError>;
 }
 
 export abstract class Http implements IFilms {
     protected url_base: string;
     protected key: string;
 
-    constructor({ url_base, key} : Config) {
+    constructor({url_base, key} : Config) {
         this.url_base = url_base;
         this.key = key;
     }
 
-    abstract getFilms(route: string) : Promise<MoviesResponse | HttpError> ;
+    abstract getFilms(route: string,page:number ) : Promise<MoviesResponse | HttpError> ;
 }

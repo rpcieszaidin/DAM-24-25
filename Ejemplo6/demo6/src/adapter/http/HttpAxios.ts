@@ -5,9 +5,9 @@ import { HttpError } from "./HttpError";
 
 
 export class HttpAxios extends Http {
-    async getFilms(route: string): Promise<MoviesResponse | HttpError> {
+    async getFilms(route: string,page:number): Promise<MoviesResponse | HttpError> {
         try {
-            const {data} = await axios.get<MoviesResponse>(`${this.url_base}${route}?api_key=${this.key}`);
+            const {data} = await axios.get<MoviesResponse>(`${this.url_base}${route}?api_key=${this.key}&page=${page}`);
             return data;
         } catch(error) {
             return new HttpError(`${error}`);

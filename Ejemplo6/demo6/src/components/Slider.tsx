@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View, Image } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import React from 'react'
 import { Movie } from '../config/entities/Movie'
 
@@ -18,8 +18,10 @@ export default function Slider({ movies, height }: Movies) {
             }}
           />
         ))}
-
       </ScrollView>
+      <Pressable>
+         <Text>Siguiente página</Text>
+      </Pressable>
     </View>
   )
 

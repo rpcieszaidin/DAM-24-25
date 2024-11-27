@@ -9,9 +9,11 @@ import { HttpFactory } from "./http/HttpFactory";
 import { HttpFactory2 } from "./http/HttpFactory2";
 import { HttpFetch } from "./http/HttpFetch";
 
+
 interface DataMovieRequest {
-    total: number;
-    page: number;
+    total?: number;
+    page?: number;
+    route?: string;
 }
 
 export class FilmAdapter {
@@ -20,10 +22,15 @@ export class FilmAdapter {
         nowPlaying: "/now_playing"
     }
 
-    static async getMovies(route: string, {total, page}:DataMovieRequest): Promise<ResultMovie | null> {
+    static async getMovies({route=this.ROUTES.nowPlaying, page=1, total}: DataMovieRequest): Promise<ResultMovie | null> {
+        console.log(route);
+        console.log(page);
         const http = HttpFactory2.build();
+
         if (!Reflect.has(FilmAdapter.ROUTES, route)) route = FilmAdapter.ROUTES.nowPlaying;
-        const movies = await http.getFilms(route);
+
+        const movies = await http.getFilms(route,page);
+
         if (movies instanceof HttpError) return null;
         const dataMovies = resultMovieMapper(movies);
         return dataMovies;
