@@ -8,7 +8,6 @@ export default function HomeScreen() {
     return (
         <View>
             <Text>HomeScreen</Text>
-            <Slider movies={nowPlaying.movies} height={100} />
         </View>
     )
 }
