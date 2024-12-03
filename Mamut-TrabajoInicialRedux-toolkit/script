@@ -1,0 +1,8 @@
+#!/bin/bash
+npm install @react-navigation/native@^6.x
+npm install react-native-screens react-native-safe-area-context
+
+npm install @react-navigation/stack@^6.x
+npm install react-native-gesture-handler
+
+
