@@ -1,0 +1,18 @@
+current directory: /Users/rajibe/node/nuevos/mamut/mamut/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+/Users/rajibe/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/rajibe/node/nuevos/mamut/mamut/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241129-49962-a53lzv sitelibdir\=./.gem.20241129-49962-a53lzv clean
+
+current directory: /Users/rajibe/node/nuevos/mamut/mamut/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241129-49962-a53lzv sitelibdir\=./.gem.20241129-49962-a53lzv
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/rajibe/node/nuevos/mamut/mamut/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241129-49962-a53lzv sitelibdir\=./.gem.20241129-49962-a53lzv install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20241129-49962-a53lzv
+
+current directory: /Users/rajibe/node/nuevos/mamut/mamut/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241129-49962-a53lzv sitelibdir\=./.gem.20241129-49962-a53lzv clean
